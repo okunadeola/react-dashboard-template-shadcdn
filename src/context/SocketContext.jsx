@@ -10,11 +10,21 @@ const SocketContext = createContext();
 // http://localhost:4000
 
 
+// https://bnpl-chatbot-server.herokuapp.com/
 
-const socket = io("https://clancomsocket.vercel.app/", {
+
+const socket = io("https://bnpl-chatbot-server.herokuapp.com/", {
   // autoConnect: false,
   secure: true
 });
+
+
+
+
+// const socket = io("https://clancomsocket.vercel.app/", {
+//   // autoConnect: false,
+//   secure: true
+// });
 
 // const socket = io("https://lendnode.creditclan.com/communeety/", {
 //   autoConnect: false,
