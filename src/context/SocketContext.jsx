@@ -4,38 +4,15 @@ import { createContext, useState,  useEffect } from "react";
 import { io } from "socket.io-client";
 
 const SocketContext = createContext();
-
-//const URL = 'http://localhost:8080' // process.env.NODE_ENV === 'production' ? undefined : 'http://localhost:4000';
-
-// http://localhost:4000
+const socketUrl = import.meta.env.VITE_APP_SOCKET_URL
 
 
-// https://bnpl-chatbot-server.herokuapp.com/
-
-
-const socket = io("https://bnpl-chatbot-server.herokuapp.com/", {
-  // autoConnect: false,
-  secure: true
+const socket = io(socketUrl, {
+  autoConnect: false,
+  // secure: true
 });
 
 
-
-
-// const socket = io("https://clancomsocket.vercel.app/", {
-//   // autoConnect: false,
-//   secure: true
-// });
-
-// const socket = io("https://lendnode.creditclan.com/communeety/", {
-//   autoConnect: false,
-// });
-
-
-// const socket = io("http://localhost:4000", {
-//   autoConnect: false,
-// });
-
-// const socket = io('https://warm-wildwood-81069.herokuapp.com');
 
 const SocketContextProvider = ({ children }) => {
   const [allChat, setAllChat] = useState([]);
