@@ -13,7 +13,7 @@ const SocketContext = createContext();
 
 const socket = io("https://clancomsocket.vercel.app/", {
   // autoConnect: false,
-
+  secure: true
 });
 
 // const socket = io("https://lendnode.creditclan.com/communeety/", {
