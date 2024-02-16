@@ -1,6 +1,6 @@
 import { uploadImage } from "../../../utils";
 import { Camera, XCircle } from "lucide-react";
-import React, { Fragment, useRef, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 
 const Cloud = () => {
   const [isLoading, setIsLoading] = useState(false);

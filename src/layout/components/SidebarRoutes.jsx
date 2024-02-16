@@ -1,4 +1,4 @@
-import { BarChart, Compass, ContainerIcon, Image, Layout, List } from "lucide-react";
+import { BarChart, Calendar, Compass, ContainerIcon, Image, Layout, List, View } from "lucide-react";
 import SidebarItem from "./SidebarItem";
 import usePathname from "../../hooks/usePathname";
 
@@ -22,6 +22,16 @@ const guestRoutes = [
         icon: ContainerIcon,
         label: "Payment",
         href: "/payment"
+    },
+    {
+        icon: Calendar,
+        label: "Calendar",
+        href: "/calendar"
+    },
+    {
+        icon: View,
+        label: "Others",
+        href: "/others"
     },
 ]
 

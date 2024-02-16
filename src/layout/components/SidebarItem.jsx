@@ -1,4 +1,5 @@
-import { cn } from "../../../lib/utils";
+/* eslint-disable react/prop-types */
+import { cn } from "../../lib/utils";
 import usePathname from "../../hooks/usePathname";
 import { useNavigate } from "react-router-dom";
 

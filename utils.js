@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 
 
 import axios from 'axios'
-import Swal, {SweetAlertOptions} from "sweetalert2"; 
+import Swal from "sweetalert2"; 
 import withReactContent from 'sweetalert2-react-content'
 
 const ReactSwal = withReactContent(Swal)
@@ -10,7 +11,21 @@ const ReactSwalWithInput = ReactSwal.mixin({
   input: 'text',
 })
 
+// ** Checks if an object is empty (returns boolean)
+export const isObjEmpty = obj => Object.keys(obj).length === 0
 
+// ** React Select Theme Colors
+export const selectThemeColors = theme => ({
+  ...theme,
+  colors: {
+    ...theme.colors,
+    primary25: '#7367f01a', // for option hover bg-color
+    primary: '#7367f0', // for selected option bg-color
+    neutral10: '#7367f0', // for tags bg-color
+    neutral20: '#ededed', // for input border-color
+    neutral30: '#ededed' // for input hover border-color
+  }
+})
 
 
 export const confirm = () => {
